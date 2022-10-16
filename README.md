@@ -1,2 +1,3 @@
-# Extracting-Gradients-from-huGGing-face-Sentence-Classifiers
-EGGGS-C: Extracting text gradients from Hugging face Transformers 
+# EGGGS-C: Extracting Gradients from huGGing face Sentence-Classifiers
+
+Our aim is to extract text gradients from the transformers part of the Hugging face Framework.
