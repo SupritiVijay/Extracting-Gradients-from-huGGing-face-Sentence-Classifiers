@@ -2,7 +2,7 @@ from egggs_c import get_grad, word_importance_ranking
 import transformers
 import torch
 
-if __name__ == '__main__':
+def main():
     model = transformers.AutoModelForSequenceClassification.from_pretrained("lvwerra/distilbert-imdb")
     tokenizer = transformers.AutoTokenizer.from_pretrained("lvwerra/distilbert-imdb")
     output = get_grad(model, tokenizer, ["One of the other reviewers has mentioned that after watching just 1 Oz episode you'll be hooked."])
@@ -15,3 +15,6 @@ if __name__ == '__main__':
     importance_scores_1, reranked_words_1 = word_importance_ranking(output_1, tokenizer)
     print("0", reranked_words_0[:5])
     print("1", reranked_words_1[:5])
+
+if __name__ == '__main__':
+    main()
